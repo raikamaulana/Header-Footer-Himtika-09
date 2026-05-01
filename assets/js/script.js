@@ -123,6 +123,25 @@
 	
 		});
 	}
+
+	$(window).on('scroll', function() {
+		var scrollPos = $(window).scrollTop();
+		var btn = $('#backToTop');
+
+		if (scrollPos > 300) {
+			btn.addClass('show');
+		} else {
+			btn.removeClass('show');
+		}
+	});
+
+	// Fungsi Klik: Balik ke Atas
+	$('#backToTop').on('click', function(e) {
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop: 0
+		}, 0);
+	});
 	
 	// Loading masuk page akan di gantikan dengan fungsi berikut
 	
