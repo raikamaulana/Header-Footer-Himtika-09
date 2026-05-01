@@ -267,6 +267,27 @@
 	.live-news .rectangle .rectangle-shadow{
 		display: none;
 	} */
+
+    .back-to-top {
+        bottom: 40px; /* Lebih mepet ke bawah */
+        right: 30px;  /* Lebih mepet ke kanan */
+    }
+
+    .button {
+        width: 40px;  /* Kecilin dari 50px ke 40px */
+        height: 40px;
+        padding: 8px;
+    }
+
+    .button .svg {
+        width: 18px;  /* Icon juga ikut mengecil biar proporsional */
+        height: 18px;
+    }
+
+    /* Sembunyikan efek 'Top' di mobile biar nggak menuhi layar pas kena jempol */
+    .button::after {
+        display: none !important;
+    }
 }
 
 @media only screen and (min-width: 768px){
@@ -294,4 +315,11 @@
 		width:100%;
 		text-align:center	
 	}
+}
+
+@media only screen and (max-width: 480px) {
+    .back-to-top {
+        bottom: 30px; 
+        right: 20px;
+    }
 }
